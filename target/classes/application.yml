@@ -1,0 +1,32 @@
+  
+spring:
+  application:
+    name: CartService
+  jackson:
+    serialization:
+      indent-output: true
+server:
+  port: 8090
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+      
+management:
+  endpoint:
+    health:
+      show-details: always      
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ribbon:
+  eureka:
+    enabled: true
+    ServerListRefreshInterval: 1000  
+
+        
+          
+      
